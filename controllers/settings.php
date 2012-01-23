@@ -82,8 +82,9 @@ class Settings extends ClearOS_Controller
         // Load dependencies
         //------------------
 
-        $this->load->library('ftp/ProFTPd');
+        $this->lang->load('base');
         $this->lang->load('ftp');
+        $this->load->library('ftp/ProFTPd');
 
         $data['mode'] = $mode;
 
@@ -129,6 +130,6 @@ class Settings extends ClearOS_Controller
         // Load views
         //-----------
 
-        $this->page->view_form('settings', $data, lang('ftp_ftp_server'));
+        $this->page->view_form('settings', $data, lang('base_settings'));
     }
 }
