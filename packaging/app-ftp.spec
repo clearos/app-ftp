@@ -24,6 +24,7 @@ License: LGPLv3
 Group: ClearOS/Libraries
 Requires: app-base-core
 Requires: app-ftp-plugin-core
+Requires: csplugin-filewatch
 
 %description core
 FTP description goes here... wordsmith required.
@@ -42,6 +43,7 @@ install -d -m 0755 %{buildroot}/etc/clearos/ftp.d
 install -d -m 0755 %{buildroot}/var/clearos/ftp
 install -d -m 0755 %{buildroot}/var/clearos/ftp/backup/
 install -D -m 0644 packaging/authorize %{buildroot}/etc/clearos/ftp.d/authorize
+install -D -m 0644 packaging/filewatch-ftp-configuration.conf %{buildroot}/etc/clearsync.d/filewatch-ftp-configuration.conf
 install -D -m 0644 packaging/proftpd.php %{buildroot}/var/clearos/base/daemon/proftpd.php
 
 %post
@@ -89,4 +91,5 @@ exit 0
 /usr/clearos/apps/ftp/language
 /usr/clearos/apps/ftp/libraries
 %config(noreplace) /etc/clearos/ftp.d/authorize
+/etc/clearsync.d/filewatch-ftp-configuration.conf
 /var/clearos/base/daemon/proftpd.php
