@@ -2,4 +2,14 @@
 
 /sbin/service clearsyncd condrestart >/dev/null 2>&1
 
+# Set DefaultAddress to avoid issue with unresolvable hostname (tracker #507)
+#----------------------------------------------------------------------------
+
+CHECK=`grep ^DefaultAddress /etc/proftpd.conf 2>/dev/null`
+
+if [ -z "$CHECK" ]; then
+    logger -p local6.notice -t installer "app-ftp-core - adding default address to configuration"
+    echo "DefaultAddress 127.0.0.1" >> /etc/proftpd.conf
+fi
+
 exit 0
