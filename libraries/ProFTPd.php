@@ -93,6 +93,8 @@ class ProFTPd extends Daemon
     ///////////////////////////////////////////////////////////////////////////////
 
     const FILE_CONFIG = '/etc/proftpd.conf';
+    const FLEXSHARE_PORT = '21';
+    const DEFAULT_PORT = '212';
 
     ///////////////////////////////////////////////////////////////////////////////
     // M E T H O D S
@@ -288,5 +290,8 @@ class ProFTPd extends Daemon
 
         if (! preg_match("/^[0-9]+$/", $port))
             return lang('ftp_port_invalid');
+
+        if ($port == self::FLEXSHARE_PORT)
+            return lang('ftp_port_reserved_for_flexshare');
     }
 }

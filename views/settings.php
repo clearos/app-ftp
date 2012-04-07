@@ -64,7 +64,8 @@ echo form_header(lang('base_settings'));
 
 echo field_input('server_name', $server_name, lang('ftp_server_name'), $read_only);
 echo field_input('max_instances', $max_instances, lang('ftp_max_instances'), $read_only);
-echo field_input('port', $port, lang('ftp_port'), $read_only);
+echo field_input('port', $port, lang('ftp_home_share_port'), $read_only);
+echo field_input('flexshare_port', $flexshare_port, lang('ftp_flexshare_port'), TRUE);
 
 echo field_button_set($buttons);
 

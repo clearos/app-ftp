@@ -120,6 +120,7 @@ class Settings extends ClearOS_Controller
             $data['server_name'] = $this->proftpd->get_server_name();
             $data['max_instances'] = $this->proftpd->get_max_instances();
             $data['port'] = $this->proftpd->get_port();
+            $data['flexshare_port'] = '21';
         } catch (Exception $e) {
             $this->page->view_exception($e);
             return;
