@@ -1,5 +1,5 @@
 <?php
-$lang['ftp_app_description'] = 'FTP description goes here... wordsmith required.'; // FIXME
+$lang['ftp_app_description'] = 'The FTP Server provides file management and storage using the standard FTP and FTP Secure protocols';
 $lang['ftp_app_name'] = 'FTP Server';
 $lang['ftp_server_name'] = 'Server Name';
 $lang['ftp_max_instances'] = 'Maximum Instances';
