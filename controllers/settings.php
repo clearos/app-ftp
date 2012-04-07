@@ -105,8 +105,6 @@ class Settings extends ClearOS_Controller
                 $this->proftpd->set_max_instances($this->input->post('max_instances'));
                 $this->proftpd->set_port($this->input->post('port'));
 
-                $this->proftpd->reset(TRUE);
-
                 $this->page->set_status_updated();
                 redirect('/ftp');
             } catch (Exception $e) {

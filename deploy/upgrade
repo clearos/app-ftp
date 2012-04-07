@@ -1,7 +1,5 @@
 #!/bin/sh
 
-/sbin/service clearsyncd condrestart >/dev/null 2>&1
-
 # Set DefaultAddress to avoid issue with unresolvable hostname (tracker #507)
 #----------------------------------------------------------------------------
 

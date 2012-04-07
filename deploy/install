@@ -22,3 +22,8 @@ chkconfig proftpd on
 
 logger -p local6.notice -t installer "app-ftp-core - starting FTP server"
 service proftpd start
+
+# Reload clearsyncd
+#------------------
+
+/sbin/service clearsyncd condrestart >/dev/null 2>&1
