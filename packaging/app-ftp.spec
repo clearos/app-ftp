@@ -1,7 +1,7 @@
 
 Name: app-ftp
 Epoch: 1
-Version: 1.0.11
+Version: 1.0.15
 Release: 1%{dist}
 Summary: FTP Server
 License: GPLv3
@@ -16,7 +16,7 @@ Requires: app-groups
 Requires: proftpd >= 1.3.3e
 
 %description
-FTP description goes here... wordsmith required.
+The FTP Server provides file management and storage using the standard FTP and FTP Secure protocols
 
 %package core
 Summary: FTP Server - APIs and install
@@ -27,7 +27,7 @@ Requires: app-ftp-plugin-core
 Requires: csplugin-filewatch
 
 %description core
-FTP description goes here... wordsmith required.
+The FTP Server provides file management and storage using the standard FTP and FTP Secure protocols
 
 This package provides the core API and libraries.
 
