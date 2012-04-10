@@ -10,6 +10,11 @@ if [ -z "$CHECK" ]; then
     echo "DefaultAddress 127.0.0.1" >> /etc/proftpd.conf
 fi
 
+# Run syncaction on upgrades
+#---------------------------
+
+/usr/clearos/apps/ftp/deploy/syncaction
+
 # FIXME: 6.2.0 beta/rc upgrade. Remove after final
 CHECK=`grep "^Port[[:space:]]*21$" /etc/proftpd.conf`
 
