@@ -1,7 +1,7 @@
 
 Name: app-ftp
 Epoch: 1
-Version: 1.0.15
+Version: 1.1.0
 Release: 1%{dist}
 Summary: FTP Server
 License: GPLv3
@@ -19,7 +19,7 @@ Requires: proftpd >= 1.3.3e
 The FTP Server provides file management and storage using the standard FTP and FTP Secure protocols
 
 %package core
-Summary: FTP Server - APIs and install
+Summary: FTP Server - Core
 License: LGPLv3
 Group: ClearOS/Libraries
 Requires: app-base-core
