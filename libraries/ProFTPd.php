@@ -94,7 +94,7 @@ class ProFTPd extends Daemon
 
     const FILE_CONFIG = '/etc/proftpd.conf';
     const FLEXSHARE_PORT = '21';
-    const DEFAULT_PORT = '212';
+    const DEFAULT_PORT = '2121';
 
     ///////////////////////////////////////////////////////////////////////////////
     // M E T H O D S
@@ -145,7 +145,7 @@ class ProFTPd extends Daemon
         try {
             $retval = $file->lookup_value("/^Port\s+/i");
         } catch (File_No_Match_Exception $e) {
-            return 21;
+            return self::DEFAULT_PORT;
         }
 
         return $retval;

@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 $app['basename'] = 'ftp';
-$app['version'] = '1.1.0';
+$app['version'] = '1.1.1';
 $app['release'] = '1';
 $app['vendor'] = 'ClearFoundation';
 $app['packager'] = 'ClearFoundation';
@@ -37,12 +37,12 @@ $app['requires'] = array(
     'app-network', 
     'app-users',
     'app-groups',
-    'proftpd >= 1.3.3e'
 );
 
 $app['core_requires'] = array(
     'app-ftp-plugin-core',
-    'csplugin-filewatch'
+    'csplugin-filewatch',
+    'proftpd >= 1.3.4a',
 );
 
 $app['core_directory_manifest'] = array(

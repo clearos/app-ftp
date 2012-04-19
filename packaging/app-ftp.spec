@@ -1,7 +1,7 @@
 
 Name: app-ftp
 Epoch: 1
-Version: 1.1.0
+Version: 1.1.1
 Release: 1%{dist}
 Summary: FTP Server
 License: GPLv3
@@ -13,7 +13,6 @@ Requires: app-base
 Requires: app-network
 Requires: app-users
 Requires: app-groups
-Requires: proftpd >= 1.3.3e
 
 %description
 The FTP Server provides file management and storage using the standard FTP and FTP Secure protocols
@@ -25,6 +24,7 @@ Group: ClearOS/Libraries
 Requires: app-base-core
 Requires: app-ftp-plugin-core
 Requires: csplugin-filewatch
+Requires: proftpd >= 1.3.4a
 
 %description core
 The FTP Server provides file management and storage using the standard FTP and FTP Secure protocols
