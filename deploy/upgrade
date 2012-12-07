@@ -10,6 +10,22 @@ if [ -z "$CHECK" ]; then
     echo "DefaultAddress 127.0.0.1" >> /etc/proftpd.conf
 fi
 
+# PAM check
+#----------
+
+CHECK=`grep clearos/ftp.d /etc/pam.d/proftpd`
+if [ -z "$CHECK" ]; then
+    logger -p local6.notice -t installer "app-ftp-core - applying IMAP PAM configuration"
+    [ -e /etc/pam.d/proftpd ] && cp /etc/pam.d/proftpd /var/clearos/ftp/backup/proftpd.pam.$TIMESTAMP
+    cp /usr/clearos/apps/ftp/deploy/proftpd.pam /etc/pam.d/proftpd
+fi
+
+CHECK=`grep pam_shells.so /etc/pam.d/proftpd`
+if [ -n "$CHECK" ]; then
+    logger -p local6.notice -t installer "app-ftp-core - resetting pam_shells PAM configuration"
+    sed -i -e 's/pam_shells.so/pam_nologin.so/' /etc/pam.d/proftpd
+fi
+
 # Run syncaction on upgrades
 #---------------------------
 
