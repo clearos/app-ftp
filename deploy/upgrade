@@ -30,12 +30,3 @@ fi
 #---------------------------
 
 /usr/clearos/apps/ftp/deploy/syncaction
-
-# FIXME: 6.2.0 beta/rc upgrade. Remove after final
-CHECK=`grep "^Port[[:space:]]*21$" /etc/proftpd.conf`
-
-if [ -n "$CHECK" ]; then
-    sed -i -e 's/^Port[[:space:]]*21/Port 2121/' /etc/proftpd.conf 
-fi
-
-exit 0
