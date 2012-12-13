@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 $app['basename'] = 'ftp';
-$app['version'] = '1.4.8';
+$app['version'] = '1.4.9';
 $app['release'] = '1';
 $app['vendor'] = 'ClearFoundation';
 $app['packager'] = 'ClearFoundation';
@@ -63,3 +63,9 @@ $app['core_file_manifest'] = array(
         'config_params' => 'noreplace',
     ),
 );
+$app['delete_dependency'] = array(
+    'app-ftp-core',
+    'app-ftp-plugin-core',
+    'proftpd'
+);
+
