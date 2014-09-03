@@ -1,7 +1,7 @@
 
 Name: app-ftp
 Epoch: 1
-Version: 1.4.14
+Version: 1.6.5
 Release: 1%{dist}
 Summary: FTP Server
 License: GPLv3
@@ -82,7 +82,6 @@ exit 0
 %files core
 %defattr(-,root,root)
 %exclude /usr/clearos/apps/ftp/packaging
-%exclude /usr/clearos/apps/ftp/tests
 %dir /usr/clearos/apps/ftp
 %dir /etc/clearos/ftp.d
 %dir /var/clearos/ftp
