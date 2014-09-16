@@ -47,6 +47,7 @@ require_once $bootstrap . '/bootstrap.php';
 ///////////////////////////////////////////////////////////////////////////////
 
 clearos_load_language('ftp');
+clearos_load_language('network');
 
 ///////////////////////////////////////////////////////////////////////////////
 // D E P E N D E N C I E S
@@ -289,7 +290,7 @@ class ProFTPd extends Daemon
         clearos_profile(__METHOD__, __LINE__);
 
         if (! preg_match("/^[0-9]+$/", $port))
-            return lang('ftp_port_invalid');
+            return lang('network_port_invalid');
 
         if ($port == self::FLEXSHARE_PORT)
             return lang('ftp_port_reserved_for_flexshare');

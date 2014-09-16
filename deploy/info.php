@@ -27,7 +27,7 @@ $app['subcategory'] = lang('base_subcategory_file');
 
 $app['controllers']['ftp']['title'] = lang('ftp_app_name');
 $app['controllers']['settings']['title'] = lang('base_settings');
-$app['controllers']['policy']['title'] = lang('base_app_policies');
+$app['controllers']['policy']['title'] = lang('base_app_policy');
 
 /////////////////////////////////////////////////////////////////////////////
 // Packaging
