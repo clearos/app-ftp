@@ -41,7 +41,6 @@ $app['requires'] = array(
 
 $app['core_requires'] = array(
     'app-ftp-plugin-core',
-    'csplugin-filewatch',
     'proftpd >= 1.3.4a',
 );
 
@@ -53,7 +52,6 @@ $app['core_directory_manifest'] = array(
 );
 
 $app['core_file_manifest'] = array(
-    'filewatch-ftp-configuration.conf'=> array('target' => '/etc/clearsync.d/filewatch-ftp-configuration.conf'),
     'proftpd.php'=> array('target' => '/var/clearos/base/daemon/proftpd.php'),
     'authorize' => array(
         'target' => '/etc/clearos/ftp.d/authorize',

@@ -25,8 +25,3 @@ if [ -n "$CHECK" ]; then
     logger -p local6.notice -t installer "app-ftp-core - resetting pam_shells PAM configuration"
     sed -i -e 's/pam_shells.so/pam_nologin.so/' /etc/pam.d/proftpd
 fi
-
-# Run syncaction on upgrades
-#---------------------------
-
-/usr/clearos/apps/ftp/deploy/syncaction
