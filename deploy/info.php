@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 $app['basename'] = 'ftp';
-$app['version'] = '1.6.5';
+$app['version'] = '2.0.1';
 $app['release'] = '1';
 $app['vendor'] = 'ClearFoundation';
 $app['packager'] = 'ClearFoundation';
@@ -46,6 +46,7 @@ $app['core_requires'] = array(
 );
 
 $app['core_directory_manifest'] = array(
+    '/etc/proftpd.d' => array(),
     '/etc/clearos/ftp.d' => array(),
     '/var/clearos/ftp' => array(),
     '/var/clearos/ftp/backup/' => array(),
@@ -63,6 +64,7 @@ $app['core_file_manifest'] = array(
         'config_params' => 'noreplace',
     ),
 );
+
 $app['delete_dependency'] = array(
     'app-ftp-core',
     'app-ftp-plugin-core',

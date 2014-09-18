@@ -1,7 +1,7 @@
 
 Name: app-ftp
 Epoch: 1
-Version: 1.6.5
+Version: 2.0.1
 Release: 1%{dist}
 Summary: FTP Server
 License: GPLv3
@@ -40,6 +40,7 @@ mkdir -p -m 755 %{buildroot}/usr/clearos/apps/ftp
 cp -r * %{buildroot}/usr/clearos/apps/ftp/
 
 install -d -m 0755 %{buildroot}/etc/clearos/ftp.d
+install -d -m 0755 %{buildroot}/etc/proftpd.d
 install -d -m 0755 %{buildroot}/var/clearos/ftp
 install -d -m 0755 %{buildroot}/var/clearos/ftp/backup/
 install -D -m 0644 packaging/authorize %{buildroot}/etc/clearos/ftp.d/authorize
@@ -84,6 +85,7 @@ exit 0
 %exclude /usr/clearos/apps/ftp/packaging
 %dir /usr/clearos/apps/ftp
 %dir /etc/clearos/ftp.d
+%dir /etc/proftpd.d
 %dir /var/clearos/ftp
 %dir /var/clearos/ftp/backup/
 /usr/clearos/apps/ftp/deploy
