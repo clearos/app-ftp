@@ -1,7 +1,7 @@
 
 Name: app-ftp
 Epoch: 1
-Version: 2.0.1
+Version: 2.0.0
 Release: 1%{dist}
 Summary: FTP Server
 License: GPLv3
