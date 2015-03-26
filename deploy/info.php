@@ -68,4 +68,3 @@ $app['delete_dependency'] = array(
     'app-ftp-plugin-core',
     'proftpd'
 );
-
