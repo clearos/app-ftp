@@ -1,7 +1,7 @@
 
 Name: app-ftp
 Epoch: 1
-Version: 2.1.20
+Version: 2.2.1
 Release: 1%{dist}
 Summary: FTP Server
 License: GPLv3
@@ -42,7 +42,9 @@ install -d -m 0755 %{buildroot}/etc/clearos/ftp.d
 install -d -m 0755 %{buildroot}/etc/proftpd.d
 install -d -m 0755 %{buildroot}/var/clearos/ftp
 install -d -m 0755 %{buildroot}/var/clearos/ftp/backup/
+install -D -m 0644 packaging/attack-detector-proftpd.php %{buildroot}/var/clearos/attack_detector/filters/proftpd.php
 install -D -m 0644 packaging/authorize %{buildroot}/etc/clearos/ftp.d/authorize
+install -D -m 0644 packaging/clearos-proftpd.conf %{buildroot}/etc/fail2ban/jail.d/clearos-proftpd.conf
 install -D -m 0644 packaging/proftpd.php %{buildroot}/var/clearos/base/daemon/proftpd.php
 
 %post
@@ -89,5 +91,7 @@ exit 0
 /usr/clearos/apps/ftp/deploy
 /usr/clearos/apps/ftp/language
 /usr/clearos/apps/ftp/libraries
+/var/clearos/attack_detector/filters/proftpd.php
 %config(noreplace) /etc/clearos/ftp.d/authorize
+%config(noreplace) /etc/fail2ban/jail.d/clearos-proftpd.conf
 /var/clearos/base/daemon/proftpd.php

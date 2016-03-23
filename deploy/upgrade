@@ -25,3 +25,11 @@ if [ -n "$CHECK" ]; then
     logger -p local6.notice -t installer "app-ftp-core - resetting pam_shells PAM configuration"
     sed -i -e 's/pam_shells.so/pam_nologin.so/' /etc/pam.d/proftpd
 fi
+
+# Reload fail2ban if installed
+#------------------------------
+
+if [ -x /usr/bin/fail2ban-server ]; then
+    logger -p local6.notice -t installer "app-ftp-core - enabling Attack Detector configlet"
+    service fail2ban condrestart >/dev/null 2>&1
+fi

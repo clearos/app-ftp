@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 $app['basename'] = 'ftp';
-$app['version'] = '2.1.20';
+$app['version'] = '2.2.1';
 $app['release'] = '1';
 $app['vendor'] = 'ClearFoundation';
 $app['packager'] = 'ClearFoundation';
@@ -60,6 +60,12 @@ $app['core_file_manifest'] = array(
         'group' => 'root',
         'config' => TRUE,
         'config_params' => 'noreplace',
+    ),
+    'attack-detector-proftpd.php' => array('target' => '/var/clearos/attack_detector/filters/proftpd.php'),
+    'clearos-proftpd.conf' => array(
+        'target' => '/etc/fail2ban/jail.d/clearos-proftpd.conf',
+        'config' => TRUE,
+        'config_params' => 'noreplace'
     ),
 );
 
