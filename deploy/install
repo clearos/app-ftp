@@ -22,3 +22,11 @@ chkconfig proftpd on >/dev/null 2>&1
 
 logger -p local6.notice -t installer "app-ftp-core - starting FTP server"
 service proftpd start >/dev/null 2>&1
+
+# Reload fail2ban if installed
+#------------------------------
+
+if [ -x /usr/bin/fail2ban-server ]; then
+    logger -p local6.notice -t installer "app-ftp-core - enabling Attack Detector configlet"
+    service fail2ban condrestart >/dev/null 2>&1
+fi
