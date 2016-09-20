@@ -34,7 +34,7 @@ $app['controllers']['policy']['title'] = lang('base_app_policy');
 /////////////////////////////////////////////////////////////////////////////
 
 $app['requires'] = array(
-    'app-network', 
+    'app-network',
     'app-users',
     'app-groups',
 );
